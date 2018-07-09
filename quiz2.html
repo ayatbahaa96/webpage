@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz 2</title>
+	<script type="text/javascript">
+	</script>
+	<style >
+#container {
+	margin: auto;
+	width: 1200px;
+}
+
+header , footer {
+	width: 1050px;
+	background-color: #c47;
+	padding: 30px;
+	clear: both;
+	text-align: center;
+
+}
+
+nav ul li {
+
+	display: inline;
+	font-size: 20px;
+
+}
+a{
+	color: black;
+}
+a:hover {
+color: deeppink;
+background-color: black;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 20px;
+padding: 15px;
+width: 50px;
+}
+aside {
+padding: 10px;
+width: 360px;
+float: right;
+border: 1px solid black;
+margin-right: 100px;
+
+}
+.aside2{
+padding: 10px;
+width: 360px;
+float: right;
+border: 1px thick #2bb8d1;
+margin-right: 100px;
+margin-top: 20px;
+}
+
+section {
+float: left;
+width: 650px;
+}
+
+article {
+	border: 1px solid black;
+	margin: 10px;
+}
+
+input ,form{
+	font-size: 22px;
+
+}
+form{
+	padding: 10px;
+}
+	</style>
+
+</head>
+<body>
+<div id="container">
+<header>
+<h1> MY WEB SITE  <h1>
+</header>
+<nav>
+	<ul>
+		<li>
+			<a href="#">Home</a>  
+		</li>|
+		<li>
+			<a href="#">News</a>   
+		</li>|
+		<li>
+			<a href="#">Weather</a>  
+		</li>|
+	</ul>
+</nav>
+<main>
+<section>
+	<article>
+		<figure>
+		<img src="Turkey.jpg" width="550" height="300px">
+		<figcaption>Fig 1 - Turkey Istanbul </figcaption>
+		</figure>
+	</article>
+
+	<article>
+	<h2> <mark>Register</mark> Form </h2>
+		<form action="quiz2.html"> 
+				<table>
+					<tr>
+				
+					<td> Enter Your Name :	</td> 
+					<td><input type="text " name="name" placeholder="ex:Ayat" required>
+					</td>
+					</tr>
+					<tr>
+					
+					 <td>Enter Your Password :</td>   
+					 <td><input type="password" name="pass" maxlength="6" required > 
+					</td>
+					</tr>
+					<tr>
+					
+					 <td> Enter Your Email : </td>
+					 <td><input type="Email" name="email" placeholder="ex:ayat@gmail.com" required>
+					</td>
+					</tr>
+					<tr>
+					<td>Enter Your Age  : </td>
+					<td><input type="number" name="number" min="16" max="26">
+					</td>
+					</tr>
+					 <tr>
+					 <td>
+					 <input type="submit" name="submit" value="Submit" onclick="submit()"> 
+					 <input type="reset" value="Reset">
+					 </td>
+					 </tr>
+				</table>
+		</form>
+	</article>
+
+	<article>
+		<form >
+			<object width="550" height="400" data="quiz2.html"></object>
+		</form>
+	</article>
+</section>
+</main>
+<aside>
+<form action="quiz2.html">
+
+<table>
+	<tr>
+	<td>Select Date
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<input type="datetime-local">
+	</td>
+	</tr>
+</table>
+	
+</form>
+<form action="quiz2.html">
+<table>
+<tr>
+<td> Select Prog Language : </td>
+</tr>
+<tr>
+<td>
+	<input list="material">
+</td>
+	<datalist id="material">
+	<option value="HTML">
+	<option value="JAVA">
+	<option value="JAVASCRIPT">
+	<option value="PHP">
+	<option value="SQL">
+	</datalist>
+</tr>
+<tr>
+<td>
+	<input type="submit" value="Select" onclick="selectLanguage()">
+	</td>
+	</tr>
+	</table>
+	</form>
+	<script type="text/javascript">
+		
+	function selectLanguage()
+	{
+		alert("You Selected ! "  )
+	}
+
+	function submit()
+	{
+	confirm("are you save register ?");
+	}
+	</script>
+</aside>
+
+<aside class="aside2">
+
+		<h3>Contact Me</h3>
+		<h4 id="con">
+							
+		</h4>
+
+		 <h4 id="pho">
+				
+		</h4>
+		<h4 id="email">
+			
+		</h4>
+		
+
+	</aside>
+	<script type="text/javascript" >
+		let person ={
+		firstName:"ayat",
+		lastName :"bahaa",
+		fullName: function ()
+		{
+			return this.firstName + " " + this.lastName; 
+		},
+		 phoneNumbers : function ()
+		{
+				return "776532543"
+		},
+		email : function()
+			{
+				return "ayatbahaa21@gmail.com";
+			},
+};
+		document.getElementById("con").innerHTML =person.fullName();
+		document.getElementById("pho").innerHTML =person.phoneNumbers();
+		document.getElementById("email").innerHTML =person.email();
+	
+	</script>
+<footer>
+<details>
+	 <summary >&copy all Right website.</i> </summary>
+	 <h2><i> AYAT BAHAA </h2>
+	</details>
+</footer>
+</div>
+</body>
+</html>
