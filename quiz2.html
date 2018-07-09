@@ -2,8 +2,6 @@
 <html>
 <head>
 	<title>Quiz 2</title>
-	<script type="text/javascript">
-	</script>
 	<style >
 #container {
 	margin: auto;
@@ -45,6 +43,14 @@ margin-right: 100px;
 
 }
 .aside2{
+padding: 10px;
+width: 360px;
+float: right;
+border: 1px thick #2bb8d1;
+margin-right: 100px;
+margin-top: 20px;
+}
+.aside3{
 padding: 10px;
 width: 360px;
 float: right;
@@ -236,11 +242,37 @@ form{
 		document.getElementById("email").innerHTML =person.email();
 	
 	</script>
+
+<aside class="aside3">
+
+		<h3 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif "
+		>Information about page </h3>
+		<p id="infor" style="color: deeppink;font-size: 20px;">
+								
+		</p>
+	</aside>
+
+	<script type="text/javascript">
+		let info  = (information) =>
+		{
+			return "This page is Beginner work to test my information only";
+		} 
+		document.getElementById("infor").innerHTML = info();
+	</script>
 <footer>
 <details>
 	 <summary >&copy all Right website.</i> </summary>
-	 <h2><i> AYAT BAHAA </h2>
+	 <h2><i> AYAT BAHAA 
+			<p id="date" style="float: right;font-style: bold;font-size: 20px;">
+
+				</p>
+	 </h2>
+		
 	</details>
+	<script type="text/javascript">
+	var d=new Date();
+	document.getElementById("date").innerHTML = d;
+	</script>
 </footer>
 </div>
 </body>
